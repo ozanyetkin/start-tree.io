@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/gif"
+      href="http://ozanyetkin.com/wp-content/uploads/2024/04/favicon.gif"
+    />
+    <title>start-tree</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="prompt">
+        ~
+        <span> </span>
+        tree
+      </div>
+      <div class="row">
+        <div class="column">
+          <div class="tree">
+            <h1>.</h1>
+            <ul>
+              <li>
+                <h1>research</h1>
+                <ul>
+                  <li>
+                    <a href="https://paperswithcode.com/"> papers-with-code </a>
+                  </li>
+                  <li>
+                    <a href="https://huggingface.co/"> hugging-face </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h1>notes</h1>
+                <ul>
+                  <li>
+                    <a href="https://notion.so/"> notion </a>
+                  </li>
+                  <li>
+                    <a href="https://keep.google.com/"> keep </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="column">
+          <div class="tree">
+            <h1>.</h1>
+            <ul>
+              <li>
+                <h1>development</h1>
+                <ul>
+                  <li>
+                    <a href="https://github.com/"> github </a>
+                  </li>
+                  <li>
+                    <a href="https://stackoverflow.com/"> stackoverflow </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h1>business</h1>
+                <ul>
+                  <li>
+                    <a href="https://mail.google.com/"> gmail </a>
+                  </li>
+                  <li>
+                    <a href="https://drive.google.com/"> drive </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="prompt">
+        ~
+        <span> </span>
+        google
+      </div>
+      <form action="https://google.com/search?" method="GET" autocomplete="off">
+        <input autofocus="autofocus" name="q" type="text" />
+      </form>
+    </div>
+  </body>
+</html>
+<style>
+  :root {
+    /* Special */
+    --background: #000000;
+    --foreground: #42a5f5;
+    --cursor: #42a5f5;
+
+    /* Colors */
+    --color0: #000000;
+    --color1: #9a9c9f;
+    --color2: #2d2d2d;
+    --color3: #9a9c9f;
+    --color4: #9a9c9f;
+    --color5: #ec7875;
+    --color6: #9a9c9f;
+    --color7: #9a9c9f;
+    --color8: #36393f;
+    --color9: #42a5f5;
+    --color10: #2d2d2d;
+    --color11: #9a9c9f;
+    --color12: #9a9c9f;
+    --color13: #585a5a;
+    --color14: #9a9c9f;
+    --color15: #9a9c9f;
+  }
+
+  :root {
+    --font: "Roboto Mono";
+    /* --background: var(--background) !important; */
+    /* --foreground: #fffffe; */
+    /* --pink: #e53170; */
+    /* --red: #f25f4c; */
+    /* --orange: #ff8906; */
+    /* --branch: 1px solid #a7a9be; */
+    --branch: 1px solid var(--color12);
+  }
+
+  html {
+    font-size: 22px;
+  }
+
+  body {
+    background: var(--background);
+  }
+
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .prompt {
+    font-family: var(--font);
+    color: var(--color5);
+  }
+
+  .prompt ~ .prompt {
+    padding: 1.5rem 0 0.3125rem;
+  }
+
+  span {
+    color: var(--color10);
+  }
+
+  h1 {
+    display: inline;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--color9);
+  }
+
+  .tree > ul {
+    margin: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 2.5rem;
+    white-space: nowrap;
+  }
+
+  li {
+    position: relative;
+  }
+
+  li::before,
+  li::after {
+    content: "";
+    position: absolute;
+    left: -0.75rem;
+  }
+
+  li::before {
+    border-top: var(--branch);
+    top: 0.75rem;
+    width: 0.5rem;
+  }
+
+  li::after {
+    border-left: var(--branch);
+    height: 100%;
+    top: 0.25rem;
+  }
+
+  li:last-child::after {
+    height: 0.5rem;
+  }
+
+  a {
+    font-family: var(--font);
+    font-size: 1rem;
+    color: var(--color6);
+    text-decoration: none;
+    outline: none;
+  }
+
+  a:hover {
+    color: var(--color12);
+    background: var(--background);
+  }
+
+  form h1 {
+    padding-left: 0.125rem;
+  }
+
+  input {
+    font-family: var(--font);
+    font-size: 1rem;
+    color: var(--color6);
+    background-color: var(--background);
+    border-width: 1px;
+    border-color: var(--color12);
+    border-style: solid;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 100%;
+  }
+
+  .column {
+    flex: 50%;
+    padding: 5px;
+  }
+
+  .row {
+    display: flex;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+</style>
